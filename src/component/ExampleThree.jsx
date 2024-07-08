@@ -5,13 +5,16 @@ import { Donut } from './Donut'
 export const ExampleThree = () => {
   return (
     <div className='flex  gap-4 w-full h-full'>
-        <div className='w-2/4 h-full'>
+        <div className='w-3/5 h-full'>
             <Line/>            
         </div>
-        <div className='flex w-1/4 justify-center items-center'>
+        <div className='flex w-1/5 justify-center items-center'>
             <Donut/>
         </div>
-        <div className='flex w-1/4 justify-center items-center'>
+        <div className='flex w-1/5 justify-center items-center'>
+            <Donut/>
+        </div>
+        <div className='flex w-1/5 justify-center items-center'>
             <Donut/>
         </div>
     </div>

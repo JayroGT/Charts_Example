@@ -3,10 +3,10 @@ import Chart from 'chart.js/auto';
 
 export const Donut = () => {
     const data = {
-        labels: ['Red', 'Blue', 'Yellow'],
+        labels: ['Red', 'Blue'],
         datasets: [{
             label: 'My First Dataset',
-            data: [300, 50, 100],
+            data: [300, 100],
             backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
@@ -52,12 +52,10 @@ export const Donut = () => {
     }, [config]);
 
     return (
-        <div>
-            <h2>Donut with Chart.js</h2>
-            <div style={{ width: '100%', height: '20rem' }}>
+        <div style={{ width: '100%', height: '100%' }}>
+                <h2>Donut with lala Chart.js</h2>
                 <canvas ref={chartContainer}></canvas>
             </div>
-        </div>
     );
 };
 

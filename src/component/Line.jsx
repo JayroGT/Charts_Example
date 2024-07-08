@@ -10,45 +10,31 @@ export const Line = () => {
     labels: labels,
     datasets: [
       {
-        label: 'My First Dataset',
+        label: 'Admision',
         data: [65, 59, 80, 81, 56, 55, 40],
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.1
       },
       {
-        label: 'Dataset 1',
+        label: 'Desafio',
         data: [65, 59, 80, 81, 56, 55, 40],
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.1
       },
       {
-        label: 'Dataset 2',
+        label: 'Personalizado',
         data: [45, 55, 70, 60, 45, 70, 50],
         fill: false,
         borderColor: 'rgb(255, 99, 132)',
         tension: 0.1
       },
       {
-        label: 'Dataset 3',
+        label: 'Soluciones',
         data: [85, 79, 60, 51, 36, 25, 10],
         fill: false,
         borderColor: 'blue',
-        tension: 0.1
-      },
-      {
-        label: 'Dataset 4',
-        data: [20, 30, 40, 50, 60, 70, 80],
-        fill: false,
-        borderColor: 'rgb(54, 162, 235)',
-        tension: 0.1
-      },
-      {
-        label: 'Dataset 5',
-        data: [70, 65, 50, 40, 55, 45, 30],
-        fill: false,
-        borderColor: 'rgb(255, 206, 86)',
         tension: 0.1
       },
     ]

@@ -7,42 +7,69 @@ export const ChartTwo = () => {
             text: "Grafica lineal",
         },
         data: [
-            {
-                quarter: "Q1",
-                petrol: 200,
-                diesel: 100,
+            { 
+                date: "January", 
+                admision: 200, 
+                desafio: 150, 
+                personalizado: 300, 
+                soluciones: 450 
             },
-            {
-                quarter: "Q2",
-                petrol: 300,
-                diesel: 130,
+            { 
+                date: "February", 
+                admision: 220, 
+                desafio: 180, 
+                personalizado: 330, 
+                soluciones: 470 
             },
-            {
-                quarter: "Q3",
-                petrol: 350,
-                diesel: 160,
+            { 
+                date: "March", 
+                admision: 240, 
+                desafio: 210, 
+                personalizado: 360, 
+                soluciones: 490 
             },
-            {
-                quarter: "Q4",
-                petrol: 400,
-                diesel: 200,
+            { 
+                date: "April", 
+                admision: 260, 
+                desafio: 230, 
+                personalizado: 390, 
+                soluciones: 510 
+            },
+            { 
+                date: "May", 
+                admision: 280, 
+                desafio: 250, 
+                personalizado: 420, 
+                soluciones: 530
             },
         ],
         series: [
             {
                 type: "line",
-                xKey: "quarter",
-                yKey: "petrol",
-                yName: "Petrol",
+                xKey: "date",
+                yKey: "admision",
+                yName: "Admision",
             },
             {
                 type: "line",
-                xKey: "quarter",
-                yKey: "diesel",
-                yName: "Diesel",
+                xKey: "date",
+                yKey: "desafio",
+                yName: "Desafio",
+            },
+            {
+                type: "line",
+                xKey: "date",
+                yKey: "personalizado",
+                yName: "Personalizado",
+            },
+            {
+                type: "line",
+                xKey: "date",
+                yKey: "soluciones",
+                yName: "Soluciones",
             },
         ],
     });
 
-    return <AgCharts options={options} style={{ width: '100%', height: '100%' }}/>;
+    return <AgCharts options={options} style={{ width: '100%', height: '100%' }} />;
 };

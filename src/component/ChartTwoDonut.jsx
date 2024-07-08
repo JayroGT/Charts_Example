@@ -1,27 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AgCharts } from "ag-charts-react";
 
-export const ChartTwoDonut = () => {
+export const ChartTwoDonut = ({data}) => {
   const [options, setOptions] = useState({
-    data: [
-        { asset: "Stocks", amount: 60000 },
-        { asset: "Bonds", amount: 40000 },
-        { asset: "Cash", amount: 7000 },
-        { asset: "Real Estate", amount: 5000 },
-        { asset: "Commodities", amount: 3000 },
-      ], 
     title: {
       text: "Portfolio Composition",
     },
-    series: [
-      {
-        type: "donut",
-        calloutLabelKey: "asset",
-        angleKey: "amount",
-        innerRadiusRatio: 0.7,
-      },
-    ],
+    series: [],
   });
+  useEffect(() => {
+    const limitedData = data.slice(0, 1); // Limitar al primer objeto para no duplicar
+    const seriesConfig = limitedData.map((dataItem) => ({
+      type: "donut",
+      calloutLabelKey: Object.keys(dataItem)[0], 
+      angleKey: Object.keys(dataItem)[1],
+      innerRadiusRatio: 0.7,
+    }));
 
-  return <AgCharts options={options} style={{ width: '100%', height: '100%' }} />;
+    setOptions(prevOptions => ({
+      ...prevOptions,
+      series: seriesConfig,
+      data: data, 
+    }));
+  }, []);
+
+  return <AgCharts 
+            options={options} 
+            style={
+              { 
+                width: '100%', 
+                height: '100%' 
+              }} 
+            />;
 };

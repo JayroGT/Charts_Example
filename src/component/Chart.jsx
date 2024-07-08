@@ -20,16 +20,10 @@ const Chart = () => {
             dataset: {
                 source: [
                     ['product', '2012', '2013', '2014', '2015', '2016', '2017'],
-                    ['Milk Tea', 56.5, 82.1, 88.7, 70.1, 53.4, 85.1],
-                    ['Matcha Latte', 51.1, 51.4, 55.1, 53.3, 73.8, 68.7],
-                    ['Cheese Cocoa', 40.1, 62.2, 69.5, 36.4, 45.2, 32.5],
-                    ['Walnut Brownie', 25.2, 37.1, 41.2, 18, 33.9, 49.1],
-                    ['Prueba', 20.2, 17.1, 31.2, 58, 3.9, 29.1],
-                    ['Lemon Tart', 30.3, 45.2, 55.3, 23.4, 34.2, 38.5],
-                    ['Blueberry Muffin', 42.1, 35.7, 29.8, 40.2, 49.6, 47.8],
-                    ['Chocolate Donut', 28.4, 39.6, 34.2, 22.8, 36.9, 41.3],
-                    ['Strawberry Shortcake', 33.5, 44.7, 51.2, 25.9, 42.3, 39.7],
-                    ['Apple Pie', 21.6, 29.3, 37.8, 19.4, 31.1, 28.6]
+                    ['Admision', 56.5, 82.1, 88.7, 70.1, 53.4, 85.1],
+                    ['Desafio', 51.1, 51.4, 55.1, 53.3, 73.8, 68.7],
+                    ['Personalizado', 40.1, 62.2, 69.5, 36.4, 45.2, 32.5],
+                    ['Soluciones', 25.2, 37.1, 41.2, 18, 33.9, 49.1],
                 ]
             },
             xAxis: { type: 'category' },
@@ -142,7 +136,7 @@ const Chart = () => {
         };
     }, []);
 
-    return <div ref={chartRef} style={{ width: '100%', height: '100vh' }}></div>;
+    return <div ref={chartRef} style={{ width: '100%', height: '50rem' }}></div>;
 };
 
 export default Chart;
